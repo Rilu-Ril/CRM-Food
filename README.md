@@ -2,20 +2,9 @@
 
 
 # Get requests
-
-Categories:   /getAllCategories
-
-Meals:        /getAllMeals
-
-
 Orders:       /getNewOrders
-
 Orders:       /getInProgressOrders
-
 Orders:       /getDoneOrders
-
-
-Checkout:     /getCheckout:tableID
 
 # Post requests
 
@@ -41,11 +30,12 @@ There are three roles: admin, waiter and cooker
   * /getMealsBy/{ MealCategoryId }  returns Array< Meal >
   * /getMyOrders returns Array< Order > 
   * /getCheck/{OrderId} returns Check
+  
  ### post requests
   * /order (Order)
   * /addMealsToOrder (Order with id) 
   
-## sockets
+## Sockets
   * /delivered
     -> OrderId, MealId 
   * /cooking
@@ -85,15 +75,17 @@ There are three roles: admin, waiter and cooker
     "tableId": String
     
 ### Order
+
     "id": String,
     "waiterId": String,
     "table": Int,
     "meals" : Array<Meal>
     
 ### Check
+
     "orderId" : String,
-    "OrderSum": Int,
-    "ServiceFee": Int,
-    "TotalSum": Int
+    "orderSum": Int,
+    "serviceFee": Int,
+    "totalSum": Int
   
   
